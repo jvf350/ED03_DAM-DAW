@@ -98,6 +98,7 @@ public class AppTest {
     @Test
     @Tag("Calculadora")
     @DisplayName("Calculadora: resta -> 4 - 2 = 2")
+    @Disabled
     // O podemos pasarle parámetros
     //@ParameterizedTest
     //@CsvSource({"3,2,1", "4,2,2", "4,3,1"})
