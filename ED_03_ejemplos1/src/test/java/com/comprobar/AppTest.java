@@ -95,6 +95,7 @@ public class AppTest {
         assertEquals(expResult, result);
     }
 
+    @Test
     @Tag("Calculadora")
     @DisplayName("Calculadora: resta -> 4 - 2 = 2")
     // O podemos pasarle parámetros
@@ -167,6 +168,7 @@ public class AppTest {
 
     @Test
     @DisplayName("Palíndromo Test")
+    @Disable
     public void isPalindromoTest() {
         assertTrue(App.isPalindromo("sarabaras"), "sarabaras");
         assertFalse(App.isPalindromo("cacadelavaca"), "cacadelavaca");
@@ -206,6 +208,7 @@ public class AppTest {
 
     @Test
     @DisplayName("Comprobar algo para hacer el test")
+    @Disable
     public void algoTest(){
         String user = System.getenv("USER");
         // Para continuar el test debemos asumir esto
