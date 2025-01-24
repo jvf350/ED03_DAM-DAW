@@ -168,7 +168,7 @@ public class AppTest {
 
     @Test
     @DisplayName("Palíndromo Test")
-    @Disable
+    @Disabled
     public void isPalindromoTest() {
         assertTrue(App.isPalindromo("sarabaras"), "sarabaras");
         assertFalse(App.isPalindromo("cacadelavaca"), "cacadelavaca");
@@ -208,7 +208,7 @@ public class AppTest {
 
     @Test
     @DisplayName("Comprobar algo para hacer el test")
-    @Disable
+    @Disabled
     public void algoTest(){
         String user = System.getenv("USER");
         // Para continuar el test debemos asumir esto
