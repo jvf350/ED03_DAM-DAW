@@ -123,13 +123,30 @@ public class AppTest {
 
     @Tag("Calculadora")
     @Test
-    @DisplayName("Calculadora: división -> 18 * 2 = 9")
+    @DisplayName("Calculadora: división -> 18/2 = 9")
     public void divideTest() {
         double number1 = 18.0;
         double number2 = 2.0;
         double expResult = 9.0;
         double result = App.divide(number1, number2);
         assertEquals(expResult, result, 0.0);
+    }
+
+    @Tag("Calculadora")
+    @Test
+    //@DisplayName("Calculadora: división -> 10/0 -> No permitida")
+    void divideTestByZero() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            App.divide(10, 0);
+        });
+
+        // Otra forma de hacerlo usando fail en lugar de exp lambda
+        try {
+            App.divide(10, 0);
+            fail("Se esperaba una excepción IllegalArgumentException");
+        } catch (IllegalArgumentException e) {
+            // La excepción fue lanzada correctamente
+        }
     }
 
     @Test
