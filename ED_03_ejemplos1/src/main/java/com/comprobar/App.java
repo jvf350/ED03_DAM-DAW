@@ -32,6 +32,9 @@ public class App {
     }
 
     public static double divide(double number1, double number2){
+        if (number2 == 0) {
+            throw new IllegalArgumentException("No se puede dividir entre cero.");
+        }
         return number1 / number2;
     }
 
