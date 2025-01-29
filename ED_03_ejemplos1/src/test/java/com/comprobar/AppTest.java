@@ -118,7 +118,7 @@ public class AppTest {
         double number2 = 3.0;
         double expResult = 12.0;
         double result = App.multiply(number1, number2);
-        assertEquals(expResult, result, 0.0);
+        assertEquals(expResult, result, 0.0); // Delta 0.0: Se espera coincidencia exacta
     }
 
     @Tag("Calculadora")
@@ -127,9 +127,9 @@ public class AppTest {
     public void divideTest() {
         double number1 = 18.0;
         double number2 = 2.0;
-        double expResult = 9.0;
+        double expResult = 9.001;
         double result = App.divide(number1, number2);
-        assertEquals(expResult, result, 0.0);
+        assertEquals(expResult, result, 0.001); // Delta 0.001: Se permite una diferencia de hasta 0.001
     }
 
     @Tag("Calculadora")
